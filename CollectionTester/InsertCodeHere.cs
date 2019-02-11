@@ -17,7 +17,7 @@ namespace CollectionTester
 
             //QueueTester queueTester = new QueueTester();
 
-            //StackTester stackTester = new StackTester();
+            StackTester stackTester = new StackTester();
 
             //DictionaryTester dictionaryTester = new DictionaryTester();
 

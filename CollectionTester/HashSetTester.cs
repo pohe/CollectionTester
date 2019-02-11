@@ -25,13 +25,20 @@ namespace CollectionTester
             { 
                 Console.WriteLine(name); 
             }
-            Console.WriteLine("\nCustomers who are also employees:"); 
-           // customers.IntersectWith(employees); 
+            //Console.WriteLine("\nCustomers who are also employees:"); 
+            //customers.IntersectWith(employees);
+            //foreach (string name in customers)
+            //{
+            //    Console.WriteLine(name);
+            //}
+            Console.WriteLine("\nCustomers union employees:");
             IEnumerable<string> cu = customers.Union(employees);
-            
+
             foreach (string name in cu) { 
                 Console.WriteLine(name); 
             }
+
+            //customers.IsSubsetOf(employees);
 
         }
     }
