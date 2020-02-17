@@ -18,6 +18,7 @@ namespace CollectionTester
             {
                 numbers.AddFirst(number);
             }
+            
             // Iterate using a for statement Console.WriteLine("Iterating using a for statement:"); 
             for (LinkedListNode<int> node = numbers.First; node != null; node = node.Next)
             {
