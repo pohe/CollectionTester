@@ -31,7 +31,7 @@ namespace CollectionTester
                 int number = numbers.Dequeue();      
                 Console.WriteLine("{0} has left the queue", number); 
             }
-            int i = numbers.Peek();
+            //int i = numbers.Peek();
         }
     }
 }

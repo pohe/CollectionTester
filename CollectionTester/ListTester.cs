@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -37,12 +38,48 @@ namespace CollectionTester
                 Console.WriteLine(number);
             }
 
+            Console.WriteLine("Sorting");
             numberList.Sort();
+            //numberList.Reverse(); 
+            //numberList.Sort((int x, int y) =>
+            //{
+            //    if (y > x)
+            //        return 1;
+            //    else if (x > y)
+            //        return -1;
+            //    else
+            //    {
+            //        return 0;
+            //    }
+            //});
+            printList();
             int searchFor = 16;
             int index = -1;
             index = numberList.BinarySearch(searchFor);
             if (index >= 0)
                 Console.WriteLine($"The number {searchFor}  found {index} ");
+            int ib= numberList.FindIndex((x)=>x>5&&x<20);
+            Console.WriteLine($"Number betweeen 5 and 20 {numberList[ib]}");
+
+            Console.WriteLine("Equal numbers");
+            List<int> eqList = numberList.FindAll((x) => x % 2 == 0);
+            foreach (int eq in eqList)
+            {
+                Console.WriteLine(eq);
+            }
+
+            Console.WriteLine($"Using foreach printing equal numbers");
+            numberList.ForEach(delegate (int number)
+            {
+                if (number%2==0)
+                    Console.WriteLine($"Equal number {number}");
+            });
+
+            Console.WriteLine($"Using foreach printing all numbers");
+            numberList.ForEach(( number)=>
+            {
+                Console.Write($"{number}  ");
+            });
 
         }
 

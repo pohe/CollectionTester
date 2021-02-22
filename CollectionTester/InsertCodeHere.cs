@@ -10,14 +10,14 @@ namespace CollectionTester
         internal void MyCode()
         {
             //ListTester listTester = new ListTester();
-            ////listTester.printList();
+            //listTester.printList();
 
 
             //LinkedListTester linkedList = new LinkedListTester();
 
             //QueueTester queueTester = new QueueTester();
 
-            StackTester stackTester = new StackTester();
+            //StackTester stackTester = new StackTester();
 
             //DictionaryTester dictionaryTester = new DictionaryTester();
 

@@ -24,7 +24,7 @@ namespace CollectionTester
             // Adding using the Add method
             students.Add("124", s2);
             Student s3 = new Student("125", "Clara", "Bakkesvinget 71", "12121212");
-            //Adding sing array notation
+            //Adding using array notation
             students["125"] = s3;
             //students.Add("125", s3);
             Console.WriteLine("The Dictionary contains: ");
