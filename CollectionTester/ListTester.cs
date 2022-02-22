@@ -21,6 +21,7 @@ namespace CollectionTester
             {
                 numberList.Add(number * number);
             }
+            
             printList();
             Console.WriteLine("Removes the element 0");
             numberList.Remove(0);// removes the element with value 0
@@ -39,19 +40,20 @@ namespace CollectionTester
             }
 
             Console.WriteLine("Sorting");
-            numberList.Sort();
+            //numberList.Sort();
             //numberList.Reverse(); 
-            //numberList.Sort((int x, int y) =>
-            //{
-            //    if (y > x)
-            //        return 1;
-            //    else if (x > y)
-            //        return -1;
-            //    else
-            //    {
-            //        return 0;
-            //    }
-            //});
+            numberList.Sort((int x, int y) =>
+            {
+                if (y > x)
+                    return 1;
+                else if (x > y)
+                    return -1;
+                else
+                {
+                    return 0;
+                }
+            });
+            //numberList.Sort(new SorterOmvendt());
             printList();
             int searchFor = 16;
             int index = -1;
